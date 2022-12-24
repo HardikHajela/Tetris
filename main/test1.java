@@ -9,13 +9,15 @@ public class test1{
         //Asking the user to input the demension of Grids
         //has to be positive 
         Scanner sc = new Scanner(System.in);
-        int x,y;
+        int width=-1, height=20;
         while(true){
             try{
-                System.out.println("Kindly Enter the dimentions of the grid(positive and numeric):");
-                x = sc.nextInt();
-                y = sc.nextInt();
-                break;
+                System.out.println("Kindly enter the width of the Grid):");
+                width = sc.nextInt();
+                if(width>0 && width<=10000){
+                    System.out.println("Lets Start the game:"); 
+                    break;
+                }
             }
             catch(Exception e){
                 //System.out.println("Kindly Enter a the dimentions of the grid:");
@@ -23,5 +25,8 @@ public class test1{
             }
         }
         sc.close();
+
+        int[][] gameBackEnd = new int[width][height];
+        //String [][] c= new String[width][height];
     }
 } 
