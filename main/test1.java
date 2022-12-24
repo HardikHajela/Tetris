@@ -2,6 +2,7 @@ package main;
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.io.*;
 
 public class test1{
@@ -37,7 +38,7 @@ public class test1{
     }
 
     private static void setAllToZero(int arr[][]){
-        for (int i = 0; i < height; i++) {
+        for (int i = 0; i < arr.length; i++) {
             Arrays.fill(arr[i], 0);
         }
     }
@@ -49,23 +50,23 @@ public class test1{
             System.out.println();
         }
     }
-    private static void deleteGivenRow(int row) {
+    private static void deleteGivenRows(LinkedList<Integer> rows, int arr[][]) {
         
     }
-    private static void name() {
-        //int firstInRow; //refer to 2 lines below 
-        int count=0, temp;  // count
-        for (int i = 0; i < gameBackEnd.length; i++) {
-            //firstInRow= gameBackEnd[i][0]; 
-            //ONLY applicable if you want to for diff numbers than 1; you may do that to introduce color schemes
-            for (int j: gameBackEnd[i]) {
-                if(j==1);
-                count++;
+    private static void checkIfRowFilled(int arr[][]) {
+        int firstInRow=1; 
+        int count=0;  // count for
+        LinkedList<Integer> rowsFilled = new LinkedList<>();
+        for (int i = 0; i < arr.length; i++) {
+            //firstInRow= arr[i][0];  //when firstInRow is any other number than 0 and 1, will be used while assigning color to blocks
+            for (int j: arr[i]) {
+                if(j==firstInRow) count++;
             }
+            if(count==arr.length) rowsFilled.add(i);
         }
 
-        if(count==width){
-            //delete a row function
+        if(rowsFilled.size()>0){
+            deleteGivenRows(rowsFilled, arr);
         }
     }
 
