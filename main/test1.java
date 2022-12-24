@@ -51,7 +51,7 @@ public class test1{
         }
     }
     private static void deleteGivenRows(LinkedList<Integer> rows, int arr[][]) {
-        
+        //WE HAVE TO DELETE GIVEN ROW AND REPLACE IT WITH THE ABOVE ROWS
     }
     private static void checkIfRowFilled(int arr[][]) {
         int firstInRow=1; 
