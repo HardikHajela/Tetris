@@ -7,7 +7,7 @@ import java.io.*;
 
 public class test1{
 
-    static int width=-1, height=20;
+    static int width=-1, height=5; //20
 
     public static void main(String[] args) {
         //Asking the user to input the demension of Grids
@@ -15,7 +15,7 @@ public class test1{
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
-                System.out.println("Kindly enter the width of the Grid:\n***Non-decimal number which ismore than 2, less than 100.***");
+                System.out.println("Kindly enter the width of the Grid:\n***Non-decimal number which is more than 2, less than 100.***");
                 width = sc.nextInt();
                 if(width>2 && width<=100){
                     System.out.println("Lets Start the game:"); 
@@ -38,9 +38,10 @@ public class test1{
     }
 
     private static void setAllToZero(int arr[][]){
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length-1; i++) {    ////
             Arrays.fill(arr[i], 0);
         }
+        Arrays.fill(arr[arr.length-1], 1); ////
     }
     private static void displayArray(int arr[][]) {
         for (int i = 0; i < arr.length; i++) {
@@ -66,6 +67,7 @@ public class test1{
         }
 
         if(rowsFilled.size()>0){
+            System.out.println("Delete called on rows:" + rowsFilled);
             deleteGivenRows(rowsFilled, arr);
         }
     }
