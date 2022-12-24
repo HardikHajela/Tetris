@@ -59,14 +59,15 @@ public class test1{
         //doing it for the first element in LL
         int linkedListElement = rows.get(0);
 
-        for(int i =0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
+        for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
             Arrays.fill(temp[i], 0);
         }
         for(int i=rows.size(); i<temp.length; i++){
             for(int j=0; j<arr.length; j++){
                 if(!(j==linkedListElement)){
                     System.arraycopy(arr[j], 0, temp[i], 0, temp[i].length);
-                    
+                    System.out.println("Temp"+i+":"); ////
+                    System.out.println(Arrays.toString(temp[i])); ////
                 }
             }
         }
