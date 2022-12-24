@@ -33,7 +33,7 @@ public class test1{
         
         setAllToZero(gameBackEnd);
         displayArray(gameBackEnd);
-
+        checkIfRowFilled(gameBackEnd);
         
     }
 
@@ -63,11 +63,11 @@ public class test1{
             for (int j: arr[i]) {
                 if(j==firstInRow) count++;
             }
-            if(count==arr.length) rowsFilled.add(i);
+            if(count==arr[i].length) rowsFilled.add(i);
         }
 
         if(rowsFilled.size()>0){
-            System.out.println("Delete called on rows:" + rowsFilled);
+            System.out.println("Delete called on rows: " + rowsFilled);
             deleteGivenRows(rowsFilled, arr);
         }
     }
