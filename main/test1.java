@@ -81,8 +81,10 @@ public class test1{
             //firstInRow= arr[i][0];  //when firstInRow is any other number than 0 and 1, will be used while assigning color to blocks
             for (int j: arr[i]) {
                 if(j==firstInRow) count++;
+                else break;
             }
             if(count==arr[i].length) rowsFilled.add(i);
+            count=0;
         }
 
         if(rowsFilled.size()>0){
