@@ -38,10 +38,10 @@ public class test1{
     }
 
     private static void setAllToZero(int arr[][]){
-        for (int i = 0; i < arr.length-1; i++) {    ////
+        for (int i = 0; i < arr.length-2; i++) {    ////
             Arrays.fill(arr[i], 0);
         }
-        Arrays.fill(arr[arr.length-1], 1); ////
+        Arrays.fill(arr[arr.length-1], 1); Arrays.fill(arr[arr.length-2], 1); ////
     }
     private static void displayArray(int arr[][]) {
         for (int i = 0; i < arr.length; i++) {
@@ -54,7 +54,24 @@ public class test1{
     private static void deleteGivenRows(LinkedList<Integer> rows, int arr[][]) {
         //WE HAVE TO DELETE GIVEN ROW AND REPLACE IT WITH THE ABOVE ROWS
 
-        //take row from above and paste it here
+        int[][] temp= new int[arr.length][arr[0].length];       //temporary Array
+
+        //doing it for the first element in LL
+        int linkedListElement = rows.get(0);
+
+        for(int i =0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
+            Arrays.fill(temp[i], 0);
+        }
+        for(int i=rows.size(); i<temp.length; i++){
+            for(int j=0; j<arr.length; j++){
+                if(!(j==linkedListElement)){
+                    System.arraycopy(arr[j], 0, temp[i], 0, temp[i].length);
+                    
+                }
+            }
+        }
+        System.out.println("Temp:");
+        displayArray(temp); ////
     }
     private static void checkIfRowFilled(int arr[][]) {
         int firstInRow=1; 
