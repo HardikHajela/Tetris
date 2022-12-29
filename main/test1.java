@@ -63,12 +63,12 @@ public class test1{
         }
 
         //System.out.println(rows.size());
-        int newArrayRow=0;
-        for (int i = rows.size(); i < arr.length; i++) {
-            if (i != linkedListElement) {
-                temp[newArrayRow++] = arr[i];
-            }
-        }
+        // int newArrayRow=0;
+        // for (int i = rows.size(); i < arr.length; i++) {
+        //     if (i != linkedListElement) {
+        //         temp[newArrayRow++] = arr[i];
+        //     }
+        // }
 
 
         System.out.println("Temp:"); ////
