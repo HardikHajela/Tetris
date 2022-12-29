@@ -61,7 +61,16 @@ public class test1{
         for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
             Arrays.fill(temp[i], 0);
         }
-        
+
+
+        int newArrayRow=0;
+        for (int i = rows.size(); i < arr.length; i++) {
+            if (i != linkedListElement) {
+                temp[newArrayRow++] = arr[i];
+            }
+        }
+
+
         System.out.println("Temp:"); ////
         displayArray(temp); ////
     }
