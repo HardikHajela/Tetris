@@ -59,10 +59,10 @@ public class test1{
         int linkedListElement = rows.get(0);
 
         for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
-            Arrays.fill(temp[i], 0);
+            //Arrays.fill(temp[i], 0);
         }
 
-
+        System.out.println(rows.size());
         int newArrayRow=0;
         for (int i = rows.size(); i < arr.length; i++) {
             if (i != linkedListElement) {
