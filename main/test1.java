@@ -58,9 +58,9 @@ public class test1{
         //doing it for the first element in LL
         int linkedListElement = rows.get(0);
 
-        for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
-            //Arrays.fill(temp[i], 0);
-        }
+        // for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
+        //     Arrays.fill(temp[i], 1);
+        // }                                //COMMENTED SINCE NOT NEEDED
 
         // int newArrayRow=0;
         // for (int i = rows.size(); i < arr.length; i++) {
