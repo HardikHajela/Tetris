@@ -62,7 +62,6 @@ public class test1{
             //Arrays.fill(temp[i], 0);
         }
 
-        //System.out.println(rows.size());
         // int newArrayRow=0;
         // for (int i = rows.size(); i < arr.length; i++) {
         //     if (i != linkedListElement) {
