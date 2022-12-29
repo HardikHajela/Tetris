@@ -70,7 +70,7 @@ public class test1{
                 }
             }
         }
-        System.out.println("Temp:");
+        System.out.println("Temp:"); ////
         displayArray(temp); ////
     }
     private static void checkIfRowFilled(int arr[][]) {
@@ -88,8 +88,8 @@ public class test1{
         }
 
         if(rowsFilled.size()>0){
-            System.out.println("Delete called on rows: " + rowsFilled);
-            deleteGivenRows(rowsFilled, arr);
+            System.out.println("Delete called on rows: " + rowsFilled); ////
+            deleteGivenRows(rowsFilled, arr); ////
         }
     }
 
