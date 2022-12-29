@@ -60,7 +60,7 @@ public class test1{
 
         // for(int i=0; i<rows.size(); i++){      //filling the first n colomns w zero that will be removed
         //     Arrays.fill(temp[i], 1);
-        // }                                //COMMENTED SINCE NOT NEEDED 
+        // }                                //COMMENTED SINCE NOT NEEDED
 
         // int newArrayRow=0;
         // for (int i = rows.size(); i < arr.length; i++) {
