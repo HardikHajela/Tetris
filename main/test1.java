@@ -85,7 +85,6 @@ public class test1{
             if(count==arr[i].length) rowsFilled.add(i);
             count=0;
         }
-
         if(rowsFilled.size()>0){
             System.out.println("Delete called on rows: " + rowsFilled); ////
             deleteGivenRows(rowsFilled, arr); ////
