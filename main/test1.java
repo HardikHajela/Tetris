@@ -28,7 +28,7 @@ public class test1{
         sc.close();
 
         int[][] gameBackEnd = new int[height][width];
-        //String [][] c= new String[height][width]; //"■"
+        //String [][] c= new String[height][width]; // "■"
         
         setAllToZero(gameBackEnd);
         displayArray(gameBackEnd);
